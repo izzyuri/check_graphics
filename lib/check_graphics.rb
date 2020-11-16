@@ -1,5 +1,2 @@
-require "check_graphics/version"
-
-class Graphics
-  
-
+require_relative "./check_graphics/version"
+require_relative './check_graphics/cli'
