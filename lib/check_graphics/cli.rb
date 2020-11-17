@@ -13,7 +13,6 @@ class CheckGraphics::CLI
             case input
             when "3070"
                 gc3070 = CheckGraphics::Scrape.scrape_site("rtx3070")
-                #binding.pry
                 puts gc3070.display_info
             when "3080"
                 gc3080 = CheckGraphics::Scrape.scrape_site("rtx3080")
