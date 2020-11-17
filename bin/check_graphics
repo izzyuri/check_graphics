@@ -1,5 +1,11 @@
 #!/usr/bin/env ruby
 
-require './lib/check_graphics'
 
-CheckGraphics::CLI.new.call
+require 'require_all'
+require 'nokogiri'
+require 'open-uri'
+require 'pry'
+require_all 'lib'
+CheckGraphics::Scrape.new.scrape_site
+#CheckGraphics::CLI.new.call
+# require './lib'
