@@ -1,7 +1,7 @@
 require 'nokogiri'
 require 'open-uri'
 require 'pry'
-#require "check_graphics/version"
+
 require_relative "check_graphics/version"
 require_relative 'check_graphics/GraphicsCard'
 require_relative 'check_graphics/scrape'

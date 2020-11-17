@@ -1,5 +1,3 @@
 #!/usr/bin/env ruby
-#require_all 'lib'
-#CheckGraphics::Scrape.new.scrape_site
 require './lib/check_graphics_env'
 CheckGraphics::CLI.new.call
