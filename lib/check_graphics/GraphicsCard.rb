@@ -1,5 +1,4 @@
-#class CheckGraphics::GraphicsCard
-    class GraphicsCard
+class CheckGraphics::GraphicsCard
     attr_accessor :mfr, :card, :status
 
     @@all = []
@@ -14,4 +13,8 @@
     def self.all
         @@all
     end
+
+    def display_info
+        "Seller: #{self.mfr}\nManufacturer: #{self.card}\nStatus: #{self.status}"
+    end 
 end
