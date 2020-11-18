@@ -7,7 +7,7 @@ class CheckGraphics::Scrape
                 mfr, series = graphics.text.split(" : ")
                 card, status = series.split(/(Out of Stock|In Stock|Preorder)/)
                 if !CheckGraphics::GraphicsCard.all.find{|gc| gc.card == card && gc.mfr == mfr}
-                    return CheckGraphics::GraphicsCard.new(mfr, card, status)
+                    CheckGraphics::GraphicsCard.new(mfr, card, status, name)
                 end
             end
         end

@@ -8,23 +8,24 @@ class CheckGraphics::CLI
         input = nil
         puts "Which Graphics cards would you like to look at today?"
         puts "Enter the number of card you would like to see (ex. 3070, 3080, 3090) or enter exit to finish."
-        while input != "exit"
             input = gets.strip.downcase
             case input
             when "3070"
-                gc3070 = CheckGraphics::Scrape.scrape_site("rtx3070")
-                puts gc3070.display_info
+                CheckGraphics::Scrape.scrape_site("rtx3070")
+                CheckGraphics::GraphicsCard.specify("rtx3070")
             when "3080"
-                gc3080 = CheckGraphics::Scrape.scrape_site("rtx3080")
-                puts gc3080.display_info
+                CheckGraphics::Scrape.scrape_site("rtx3080")
+                CheckGraphics::GraphicsCard.specify("rtx3080")
             when "3090"
-                gc3090 = CheckGraphics::Scrape.scrape_site("rtx3090")
-                puts gc3090.display_info
+                CheckGraphics::Scrape.scrape_site("rtx3090")
+                CheckGraphics::GraphicsCard.specify("rtx3090")
             when "exit"
                 puts "Check in tomorrow for updates!"
             else
                 puts "Please enter a number from the following (3070, 3080, 3090) or exit if finished."
             end
-        end
+            if input != "exit"
+                list
+            end
     end
 end
