@@ -1,7 +1,6 @@
 class CheckGraphics::CLI
     def call
         list
-        exit
     end
 
     def list
